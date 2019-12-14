@@ -1,62 +1,68 @@
 body{
-  background-color:#f1f1f1;
-  font-family:"Comic Sans MS", cursive, sans-serif;
+  	margin:0px;
+  	padding:0px;
 }
-h1 {
-  text-align:center;
-  background-color:#b8b8b8;
-  color:#555;
-  font-size:50px;
+header,footer{
+  	margin:0px;
+  	padding:15px;
+	background-color:#555;
+  	color:white;
+  	font-family:"標楷體";
+  	font-size:50px;
+  	height:100px;
+  	text-align:center;
+}
+#main{
+  display:flex;
+  height:800px;
   margin:0px;
-  padding:5px;
-  border:2px solid blue;
+  padding:0px;
+  flex-flow:row;
+  justify-content:center;
 }
-h2 {
-  text-align:center;
-  background-color:#a8a8a8;
-  color:#222;
-  font-size:40px;
-  margin:0px;
-  padding:5px;
-  border:2px solid blue;
-}
-div.content{
-  background-color:#d8d8d8;
-  color:#888;
-  font-size:25px;
-  margin:0px;
-  padding:5px;
-  width:200px;
-  height:500px;
-  border:2px solid blue;
-  display:inline-block;vertical-align:top;
-}
-div.content2{
-  background-color:#d8d8d8;
-  color:#888;
-  font-size:25px;
-  margin:0px;
-  padding:5px;
-  width:446px;
-  height:500px;
-  border:2px solid blue;
-  display:inline-block;vertical-align:top;
-}
-div.content3{
-  background-color:#d8d8d8;
-  color:#888;
-  font-size:25px;
-  margin:0px;
-  padding:5px;
-  width:200px;
-  height:500px;
-  border:2px solid blue;
-  display:inline-block;vertical-align:top;
-}
+#main>nav{
+  	background-color:#222;
+  	color:white;
+  	font-family:"標楷體";
+  	border:1px solid white;
+  	font-size:50px;
+    flex:3 1 30%;
+  	order:1;
+    flex-flow:row;
 
-ul{
-    display: block;
-    overflow: hidden;
-    list-style-type:none;
-    text-decoration:none;
 }
+#main>aricle{
+  	background-color:#111;
+  	color:white;
+  	font-family:"標楷體";
+    border:1px solid white;
+  	border-radius:20pt;
+  	font-size:50px;
+    flex:3 6 50%;
+  	order:2;
+    flex-flow:row;
+}
+#main>aside{
+  	background-color:#222;
+  	color:white;
+  	font-family:"標楷體";
+    border:1px solid white;
+  	font-size:50px;
+    flex:3 6 20%;
+  	order:3;
+    flex-flow:row;
+}
+@media all and (max-width: 640px) {
+        #main, #page {
+            flex-direction: column;
+        }
+
+        #main > article, #main > nav, #main > aside {
+            order: 0;
+        }
+  
+        #main > nav, #main > aside, header, footer {
+            min-height: 50px;
+            max-height: 50px;
+        }
+    }
