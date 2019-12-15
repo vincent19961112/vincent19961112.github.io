@@ -4,7 +4,11 @@ ul.pagination {
     margin: 0;
 }
 
-ul.pagination li {display: inline;}
+ul.pagination li {
+    display: inline;
+    border:1px solid blue;
+    background-color:white;    
+}
 
 ul.pagination li a {
     color: black;
