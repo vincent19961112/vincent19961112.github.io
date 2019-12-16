@@ -6,6 +6,7 @@ header,footer{
   	margin:0px;
   	padding:15px;
 	background-color:#555;
+	background-image: linear-gradient(#171356, #9694ad);
   	color:white;
   	font-family:"標楷體";
   	font-size:50px;
